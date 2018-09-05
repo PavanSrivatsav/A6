@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let individualUserName of names">
+    <app-user-item [name]="individualUserName"></app-user-item>
+    <!-- passing value from UserListComponent to name property in UserItemComponent -->
+  </li>
+</ul>
