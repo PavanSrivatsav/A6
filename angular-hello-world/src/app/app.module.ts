@@ -9,7 +9,6 @@ import { UserItemsComponent } from './user-items/user-items.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HelloWorldComponent,
     UserItemComponent,
     UserItemsComponent
   ],
