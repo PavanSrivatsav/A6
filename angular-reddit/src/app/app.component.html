@@ -1,0 +1,17 @@
+<form class="ui large form segment">
+  <h3 class="ui header">Add a Link</h3>
+  <div class="field">
+    <label for="title">Title:</label>
+    <input name="title" #articleTitle>
+  </div>
+  <div class="field">
+    <label for="link">Link:</label>
+    <input name="link" #articleLink>
+  </div>
+  <button (click)="addArticle(articleTitle,articleLink)" class="ui positive right floated button">Submit</button>
+</form>
+
+<div class="ui grid posts">
+  <app-article>
+  </app-article>
+</div>
