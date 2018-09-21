@@ -8,18 +8,15 @@ import { Article } from './article/article.model';
 })
 export class AppComponent {
 
-    articles: Article[];
+    articles: Article[] = [];
 
-    addArticle(title: HTMLInputElement, link: HTMLInputElement): void {
-        console.log(`title: ${title.value} , link ${link.value}`);
+    addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
+        this.articles.push(new Article(title.value, link.value));
+
+        // Empty input fields after pushing in array
+        title.value = '';
+        link.value = '';
+
+        return false;
     }
-
-    constructor() {
-        this.articles = [
-            new Article('Google', 'https://www.google.com', 10),
-            new Article('Gmail', 'https://www.gmail.com', 5)
-        ]
-
-    }
-
 }
