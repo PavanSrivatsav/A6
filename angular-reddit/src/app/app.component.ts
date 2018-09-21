@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Article } from './article/article.model';
 
 @Component({
     selector: 'app-root',
@@ -7,8 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+    articles: Article[];
+
     addArticle(title: HTMLInputElement, link: HTMLInputElement): void {
         console.log(`title: ${title.value} , link ${link.value}`);
+    }
+
+    constructor() {
+        this.articles = [
+            new Article('Google', 'https://www.google.com', 10),
+            new Article('Gmail', 'https://www.gmail.com', 5)
+        ]
+
     }
 
 }
