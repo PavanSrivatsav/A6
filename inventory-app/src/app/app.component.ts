@@ -9,9 +9,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'inventory-app';
 
-  product:Product;
+  products: Product[];
 
-  constructor(){
-    this.product=new Product('hat','A nice hat','',['Men','Hats'],30);
+  constructor() {
+    this.products = [
+
+      new Product('hat', 'A nice hat', 'assets/images/black-hat.jpg', ['Men', 'Hats'], 30),
+      new Product('shoes', 'A nice shoe', 'assets/images/black-shoes.jpg', ['Men', 'Shoes'], 60),
+      new Product('jaacket', 'A nice jaacket', 'assets/images/blue-jacket.jpg', ['Men', 'Apparel', 'Jackets and Vests'], 100)
+
+    ];
   }
 }
