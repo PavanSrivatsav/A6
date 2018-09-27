@@ -16,8 +16,13 @@ export class AppComponent {
 
       new Product('hat', 'A nice hat', 'assets/images/black-hat.jpg', ['Men', 'Hats'], 30),
       new Product('shoes', 'A nice shoe', 'assets/images/black-shoes.jpg', ['Men', 'Shoes'], 60),
-      new Product('jaacket', 'A nice jaacket', 'assets/images/blue-jacket.jpg', ['Men', 'Apparel', 'Jackets and Vests'], 100)
+      new Product('jacket', 'A nice jacket', 'assets/images/blue-jacket.jpg', ['Men', 'Apparel', 'Jackets and Vests'], 100)
 
     ];
   }
+
+  productWasSelected(selectedProduct: Product): void {
+    console.log(`selectedProduct : ${selectedProduct.shortName}`);
+  }
+
 }

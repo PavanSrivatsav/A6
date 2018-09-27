@@ -1,0 +1,6 @@
+<div class="inventory-app">
+    <product-list [productList]="products" (onProductSelected)="productWasSelected($event)">
+        <!-- when there will be an emit in onProductSelected the fn(productWasSelected) will be called
+             and the emitted message will be send via $event-->
+    </product-list>
+</div>
