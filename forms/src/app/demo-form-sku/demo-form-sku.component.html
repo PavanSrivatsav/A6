@@ -1,0 +1,17 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Demo Form: Sku</h2>
+  <form class="ui form" #f="ngForm" (ngSubmit)="onSubmitForm(f.value)">
+    <div class="field">
+      <label for="skuInput">SKU</label>
+      <input type="text" placeholder="SKU" name="sku" ngModel>
+      <!-- 1. ngModel:-
+                ngModal is used for one-waay binding and it automatically adds the input field in the formControl 
+                with key as 'name' attribute value of that element 
+            2. [(ngModel)]="name" :-
+                Two-way binding
+        -->
+    </div>
+
+    <button type="submit" class="ui button">Submit</button>
+  </form>
+</div>
