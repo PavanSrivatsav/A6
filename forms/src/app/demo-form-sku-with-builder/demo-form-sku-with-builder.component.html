@@ -1,0 +1,19 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Demo Form: Sku with Builder</h2>
+  <form [formGroup]="myFormGroup" (ngSubmit)="onSubmit(myFormGroup.value)" class="ui form">
+
+    <div class="field">
+      <label for="skuInput">SKU</label>
+
+      <input type="text" id="skuInput" placeholder="SKU" [formControl]="myFormGroup.controls['sku']">
+      <!-- Creating a custom form control and assining the value of this input field to 
+        'sku' (the form control which we created in custom formGroup) 
+        myFormGroup.controls['keyName']
+      -->
+      <br/><br/>
+      <input type="text" id="somethingInput" placeholder="Something" [formControl]="myFormGroup.controls['someThing']">
+    </div>
+
+    <button type="submit" class="ui button">Submit</button>
+  </form>
+</div>
